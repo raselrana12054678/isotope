@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html  useing Isotope</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section class="Tabs-wrrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <ul class="profolio-menu">
+                        <li class="active" data-filter="*">All</li>
+                        <li data-filter=".Web">Web</li>
+                        <li data-filter=".Softwer">Softwer</li>
+                        <li data-filter=".Grapic">Grapic</li>
+                        <li data-filter=".SEO">SEO</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row protfolio-items">
+                <div class="col-xl-4 Web SEO ">
+                    <div class="single-protfolio">
+                        <img src="assets/images/person1.jpg" alt="image">
+                        <div class="protfolio-overlay">
+                            <h4>project title</h4>
+                            <p>project shot description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 Grapic Softwer SEO">
+                    <div class="single-protfolio">
+                        <img src="assets/images/Amazing.jpg" alt="image">
+                        <div class="protfolio-overlay">
+                            <h4>project title</h4>
+                            <p>project shot description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 Grapic SEO">
+                    <div class="single-protfolio">
+                        <img src="assets/images/youngs.jpg" alt="image">
+                        <div class="protfolio-overlay">
+                            <h4>project title</h4>
+                            <p>project shot description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 Softwer Web">
+                    <div class="single-protfolio">
+                        <img src="assets/images/close-up.jpg" alt="image">
+                        <div class="protfolio-overlay">
+                            <h4>project title</h4>
+                            <p>project shot description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 Grapic SEO">
+                    <div class="single-protfolio">
+                        <img src="assets/images/male.jpg" alt="image">
+                        <div class="protfolio-overlay">
+                            <h4>project title</h4>
+                            <p>project shot description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 Web Grapic Softwer">
+                    <div class="single-protfolio">
+                        <img src="assets/images/man.jpg" alt="image">
+                        <div class="protfolio-overlay">
+                            <h4>project title</h4>
+                            <p>project shot description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="assets/Jquery/Jquery.min.js"></script>
+    <script src="assets/Jquery/Isotope.min.js"></script>
+    <script>
+        // init Isotope
+            var $grid = $('.protfolio-items').isotope({
+        // options
+        });
+        // filter items on button click
+            $('.profolio-menu').on( 'click', 'li', function() {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({ filter: filterValue });
+
+        });
+    </script>
+</body>
+</html>
